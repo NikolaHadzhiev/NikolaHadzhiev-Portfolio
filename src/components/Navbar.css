@@ -64,6 +64,10 @@
     transform: rotate(-45deg) translate(1px, 1px);
 }
 
+.dark-theme .nav__link {
+    border-color: hsl(0, 0%, 20%);
+}
+
 @media screen and (min-width: 1024px) {
     .nav {
         display: flex;
@@ -135,3 +139,4 @@
         color: var(--text-white);
     }
 }
+
