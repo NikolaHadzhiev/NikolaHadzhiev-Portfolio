@@ -77,3 +77,74 @@ img {
     max-width: 100%;
 }
 
+/* Reusable CSS */
+.container {
+    max-width: 1140px;
+    margin-inline: auto;
+}
+
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.section {
+    padding-block: 70px;
+}
+
+.section__title {
+    font-size: var(--big-font-size);
+    font-weight: var(--weight-800);
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section__title span,
+.section__subtitle span {
+    color: var(--primary-color);
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    color: var(--title-color);
+    border: 1px solid var(--primary-color);
+    padding: 15px 70px 15px 35px;
+    border-radius: 35px;
+    font-family: var(--secondary-font);
+    font-size: var(--small-font-size);
+    font-weight: var(--weight-500);
+    overflow: hidden;
+}
+
+.button__icon {
+    position: absolute;
+    background-color: var(--primary-color);
+    inset-block: -1px -1px;
+    right: 0;
+    width: 55px;
+    border-radius: 50%;
+    color: var(--text-white);
+    font-size: var(--large-font-size);
+    text-align: center;
+    line-height: 60px;
+}
+
+.button:hover {
+    color: var(--text-white);
+}
+
+.button::before {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background-color: var(--primary-color);
+    transform: translateX(100%);
+    z-index: -1;
+    transition: all 0.5s ease-out;
+}
+
+.button:hover::before {
+    transform: translateX(0);
+}
+
