@@ -5,7 +5,16 @@ import {
   FaEnvelopeOpen,
   FaBriefcase,
   FaGraduationCap,
+  FaCode,
+  FaRegFileCode
 } from "react-icons/fa";
+import { FiFileText, FiServer, FiExternalLink } from 'react-icons/fi';
+
+import Work1 from './assets/tech.jpg';
+import Work2 from './assets/NFT_BUM.jpg';
+import Work3 from './assets/Home_Automation.jpg';
+import Work4 from './assets/bankingonline.jpg';
+import Work5 from './assets/toolbox.jpg';
 
 export const links = [
   {
@@ -297,5 +306,160 @@ export const resume = [
     year: "Sep 2016 - May 2021",
     title: "Professional Qualification level 3 Office Manager <span> National Trade and Banking High School </span>",
     desc: "",
+  },
+];
+
+export const portfolio = [
+  {
+    id: 1,
+    img: Work1,
+    title: 'TechHeaven',
+    details: [
+      {
+        icon: <FiFileText />,
+        title: 'Project : ',
+        desc: 'E-commerce',
+      },
+      {
+        icon: <FiServer />,
+        title: 'Type : ',
+        desc: 'SPA with API',
+      },
+      {
+        icon: <FaCode />,
+        title: 'Language : ',
+        desc: 'C#, React, Redux, SaSS',
+      },
+      {
+        icon: <FaRegFileCode />,
+        title: 'Code : ',
+        desc: 'github.com',
+        link : "https://github.com/NikolaHadzhiev/TechHeaven-Ecommerce"
+      },
+      {
+        icon: <FiExternalLink />,
+        title: 'Preview : ',
+        desc: 'techheaven.fly.dev',
+        link: "https://techheaven.fly.dev"
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    img: Work2,
+    title: 'NFT Auction BUM',
+    details: [
+      {
+        icon: <FiFileText />,
+        title: 'Project : ',
+        desc: 'NFT Auction',
+      },
+      {
+        icon: <FiServer />,
+        title: 'Type : ',
+        desc: 'SPA',
+      },
+      {
+        icon: <FaCode />,
+        title: 'Language : ',
+        desc: 'React JS, Next JS',
+      },
+      {
+        icon: <FaRegFileCode />,
+        title: 'Code : ',
+        desc: 'github.com',
+        link: "https://github.com/NikolaHadzhiev/NFT-Auction-Bum"
+      },
+      {
+        icon: <FiExternalLink />,
+        title: 'Preview : ',
+        desc: 'nft-auction-bum',
+        link: "https://nft-auction-bum.vercel.app"
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    img: Work3,
+    title: 'Home Automation HEM',
+    details: [
+      {
+        icon: <FiFileText />,
+        title: 'Project : ',
+        desc: 'Home Automation',
+      },
+      {
+        icon: <FiServer />,
+        title: 'Type : ',
+        desc: 'SPA',
+      },
+      {
+        icon: <FaCode />,
+        title: 'Language : ',
+        desc: 'ReactJS, NextJS',
+      },
+      {
+        icon: <FaRegFileCode />,
+        title: 'Code : ',
+        desc: 'github.com',
+        link: "https://github.com/Home-Automation-HEM-Boom-Dev/Home-Automation-HEM"
+      },
+    ],
+  },
+
+  {
+    id: 4,
+    img: Work4,
+    title: 'Vitosha Bank',
+    details: [
+      {
+        icon: <FiFileText />,
+        title: 'Project : ',
+        desc: 'Banking Website',
+      },
+      {
+        icon: <FiServer />,
+        title: 'Type : ',
+        desc: 'Web Application',
+      },
+      {
+        icon: <FaCode />,
+        title: 'Language : ',
+        desc: 'ASP.Net Core, ReactJS',
+      },
+      {
+        icon: <FaRegFileCode />,
+        title: 'Code : ',
+        desc: 'github.com',
+        link: "https://github.com/GNA-projects/VitoshaBank-2.0"
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    img: Work5,
+    title: 'GNA MultiToolbox',
+    details: [
+      {
+        title: 'Project : ',
+        desc: 'Usefull toolbox',
+      },
+      {
+        title: 'Type : ',
+        desc: 'Desktop Application',
+      },
+      {
+        title: 'Language : ',
+        desc: 'C#, WPF',
+      },
+      {
+        title: 'Preview : ',
+        desc: 'github.com',
+        link: "https://github.com/GNA-projects/ITCareerProjectGNA/tree/master/ToolBoxGNA/GNA"
+      },
+    ],
   },
 ];
