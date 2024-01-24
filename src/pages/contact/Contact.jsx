@@ -32,7 +32,7 @@ const Contact = () => {
       subject: subject
     };
 
-    if(name.trim().length !== 0 && email.trim().length !== 0 && message.trim().length !== 0 || subject.trim().length !== 0) {
+    if(name.trim().length !== 0 && email.trim().length !== 0 && message.trim().length !== 0 && subject.trim().length !== 0) {
       emailjs.send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log("Email sent successfully!", response);

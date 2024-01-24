@@ -325,3 +325,9 @@
         position: relative;
     }
 }
+
+@media screen and (min-width: 350px) and (max-width: 448px){
+        .contact__form .button {
+            width: 210px;
+        }
+}
