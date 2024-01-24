@@ -41,7 +41,6 @@ const Themes = () => {
   }, [theme])
 
   return (
-    <div>
       <div className={`${showSwitcher ? "show-switcher" : ""} style__switcher`}>
         <div className="style__switcher-toggler" onClick={() => setShowSwitcher(!showSwitcher)}>
           <FaCog />
@@ -60,7 +59,6 @@ const Themes = () => {
 
         <div className="style__switcher-close" onClick={() => setShowSwitcher(!showSwitcher)}>&times;</div>
       </div>
-    </div>
   );
 };
 

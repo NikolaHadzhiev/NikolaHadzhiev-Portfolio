@@ -175,3 +175,9 @@
     font-size: var(--smaller-font-size);
     line-height: 1.6;
 }
+
+.progress__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

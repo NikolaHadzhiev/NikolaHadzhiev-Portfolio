@@ -8,8 +8,48 @@ import {
 } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import "./Contact.css";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_zq63swx";
+    const templateId = "template_kcidiug";
+    const publicKey = "J1QlXnsY1YtAnLhe5";
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "Nikola Hadzhiev",
+      message: message,
+      subject: subject
+    };
+
+    if(name.trim().length !== 0 && email.trim().length !== 0 && message.trim().length !== 0 || subject.trim().length !== 0) {
+      emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully!", response);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setSubject("");
+      })
+      .catch((error) => {
+        console.error("Error sending email: ", error);
+      })
+    }else {
+      alert("Can't have empty values in the inputs")
+    }
+  
+  }
+
   return (
     <section className="contact section">
       <h2 className="section__title">
@@ -66,13 +106,15 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <form className="contact__form">
+        <form className="contact__form" onSubmit={handleSubmit}>
           <div className="form__input-group">
             <div className="form__input-div">
               <input
                 type="text"
                 placeholder="Your Name"
                 className="form__control"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
 
@@ -81,6 +123,8 @@ const Contact = () => {
                 type="email"
                 placeholder="Your Email"
                 className="form__control"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
 
@@ -89,6 +133,8 @@ const Contact = () => {
                 type="text"
                 placeholder="Your Subject"
                 className="form__control"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
               />
             </div>
           </div>
@@ -97,6 +143,8 @@ const Contact = () => {
             <textarea
               placeholder="Your Message"
               className="form__control textarea"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
 
