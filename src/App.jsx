@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 import Navbar from "./components/Navbar"
@@ -10,16 +10,16 @@ import Contact from './pages/contact/Contact'
 
 function App() {
   return (
-   <BrowserRouter>
+   <HashRouter>
    <Navbar />
    <Themes />
    <Routes>
-    <Route path="/NikolaHadzhiev-Portfolio/" element={<Home />} />
-    <Route path="/NikolaHadzhiev-Portfolio/about" element={<About />} />
-    <Route path="/NikolaHadzhiev-Portfolio/portfolio" element={<Portfolio />} />
-    <Route path="/NikolaHadzhiev-Portfolio/contact" element={<Contact />} />
+    <Route index element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/portfolio" element={<Portfolio />} />
+    <Route path="/contact" element={<Contact />} />
    </Routes>
-   </BrowserRouter>
+   </HashRouter>
   )
 }
 
