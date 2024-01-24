@@ -128,6 +128,7 @@ img {
 }
 
 .button__icon {
+    display: flex;
     position: absolute;
     background-color: var(--primary-color);
     inset-block: -1px -1px;
@@ -137,7 +138,8 @@ img {
     color: var(--text-white);
     font-size: var(--large-font-size);
     text-align: center;
-    line-height: 60px;
+    align-items: center;
+    justify-content: center;
 }
 
 .button:hover {
