@@ -92,7 +92,7 @@ export const personalInfo = [
   {
     id: 6,
     title: "Address : ",
-    description: "str. Han Asparuh 19, Center",
+    description: "str. Han Asparuh 19, Center, Sofia, Bulgaria",
   },
 
   {
